@@ -10,198 +10,91 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="Studex home">
-        <img src="favicon.svg" alt="" width="32" height="32" />
-        <span>Studex</span>
-      </a>
-      <nav class="nav-links" aria-label="Main">
-        <a href="#features">Features</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <a class="btn btn-sm" href="#download">Download</a>
-    </div>
+  <header class="wrap nav">
+    <a class="brand" href="#top">Studex</a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="#download" class="nav-cta">Download</a>
+    </nav>
   </header>
 
   <main id="top">
-    <!-- Hero -->
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <p class="eyebrow">₱199 one-time · Offline · No account</p>
-        <h1>School and money, calmly in one place.</h1>
-        <p class="lead">
-          Studex keeps your classes, tasks, exams, allowance, expenses and savings together on your
-          phone. Everything stays on your device, so it works without internet or sign-up.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-lg" href="#download">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.6 9.48l1.84-3.18a.38.38 0 10-.66-.38l-1.86 3.22a11.4 11.4 0 00-9.84 0L5.22 5.92a.38.38 0 10-.66.38L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
-            Download for Android
-          </a>
-          <a class="btn btn-lg btn-ghost" href="#features">See what it does</a>
-        </div>
-        <ul class="hero-points">
-          <li>Pay once, keep forever</li>
-          <li>Works offline</li>
-          <li>Light &amp; dark mode</li>
-          <li>Android · iOS soon</li>
-        </ul>
-      </div>
-
-      <!-- Phone mockup drawn in HTML so the site has no image dependencies -->
-      <div class="hero-art" aria-hidden="true">
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="ph-top">
-              <div>
-                <p class="ph-muted">Thursday, 8 Oct</p>
-                <p class="ph-title">Good morning 👋</p>
-              </div>
-              <div class="ph-avatar">S</div>
-            </div>
-            <div class="ph-card ph-lilac">
-              <p class="ph-label">Left this week</p>
-              <p class="ph-big">₱1,240</p>
-              <div class="ph-bar"><span style="width:62%"></span></div>
-              <p class="ph-small">62% of allowance remaining</p>
-            </div>
-            <div class="ph-grid">
-              <div class="ph-card ph-mint">
-                <p class="ph-label">Tasks</p>
-                <p class="ph-mid">3 due</p>
-              </div>
-              <div class="ph-card ph-peach">
-                <p class="ph-label">Next exam</p>
-                <p class="ph-mid">in 4 days</p>
-              </div>
-            </div>
-            <p class="ph-section">Today's classes</p>
-            <div class="ph-row"><span class="dot dot-sky"></span><div><b>Calculus</b><small>8:00 – 9:30 · Rm 204</small></div></div>
-            <div class="ph-row"><span class="dot dot-pink"></span><div><b>Biology</b><small>10:00 – 11:30 · Lab 2</small></div></div>
-            <div class="ph-row"><span class="dot dot-lime"></span><div><b>Literature</b><small>1:00 – 2:30 · Rm 118</small></div></div>
-            <div class="ph-nav"><i></i><i class="on"></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="float float-a"><span class="dot dot-mint"></span>Essay submitted ✓</div>
-        <div class="float float-b"><span class="dot dot-sun"></span>Laptop fund · 48%</div>
+    <section class="wrap hero">
+      <h1>School and money,<br />calmly in one place.</h1>
+      <p class="lead">
+        Classes, tasks, exams, allowance, expenses and savings, all in one app. It runs offline,
+        and everything stays on your phone.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#download">Download for Android</a>
+        <span class="muted">₱199 · one-time</span>
       </div>
     </section>
 
-    <!-- Features -->
-    <section id="features" class="section">
-      <div class="wrap">
-        <p class="eyebrow center">Everything a student juggles</p>
-        <h2 class="center">One app instead of five.</h2>
-        <div class="features">
-          <article class="feature">
-            <div class="ic ic-sky"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
-            <h3>Class schedule</h3>
-            <p>Add your subjects once and see each day's classes, rooms and times at a glance.</p>
-          </article>
-          <article class="feature">
-            <div class="ic ic-mint"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a3 3 0 01-3 3H6a3 3 0 01-3-3V6a3 3 0 013-3h9"/></svg></div>
-            <h3>Tasks &amp; homework</h3>
-            <p>Track what's due by subject, mark it done, and see overdue work before it surprises you.</p>
-          </article>
-          <article class="feature">
-            <div class="ic ic-peach"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></div>
-            <h3>Exams</h3>
-            <p>Countdowns for upcoming exams so you know exactly how many days you have to prepare.</p>
-          </article>
-          <article class="feature">
-            <div class="ic ic-lilac"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="13" rx="3"/><path d="M2 10h20M6 15h4"/></svg></div>
-            <h3>Allowance</h3>
-            <p>Set a daily, weekly or monthly allowance and see what's left for the rest of the period.</p>
-          </article>
-          <article class="feature">
-            <div class="ic ic-pink"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
-            <h3>Expenses &amp; budget</h3>
-            <p>Log spending by category in seconds and stay inside the budget you set for each one.</p>
-          </article>
-          <article class="feature">
-            <div class="ic ic-sun"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.1 1.1-2 2.5-2s2.5.9 2.5 2-1.1 1.7-2.5 2-2.5.9-2.5 2 1.1 2 2.5 2 2.5-.9 2.5-2"/></svg></div>
-            <h3>Savings goals</h3>
-            <p>Save toward a new phone, a trip or tuition and watch each goal fill up as you go.</p>
-          </article>
-        </div>
-      </div>
+    <section id="features" class="wrap section">
+      <h2 class="label">Features</h2>
+      <dl class="list">
+        <div><dt>Schedule</dt><dd>Each day's classes, rooms and times at a glance.</dd></div>
+        <div><dt>Tasks</dt><dd>Homework by subject, with overdue work flagged early.</dd></div>
+        <div><dt>Exams</dt><dd>A countdown to every upcoming exam.</dd></div>
+        <div><dt>Allowance</dt><dd>Daily, weekly or monthly, and what's left in the period.</dd></div>
+        <div><dt>Expenses</dt><dd>Log spending by category and stay within budget.</dd></div>
+        <div><dt>Savings</dt><dd>Goals that fill up as you put money aside.</dd></div>
+      </dl>
     </section>
 
-    <!-- Privacy -->
-    <section id="privacy" class="section">
-      <div class="wrap privacy">
+    <section class="wrap section">
+      <h2 class="label">Privacy</h2>
+      <p class="statement">
+        No account. No internet. No tracking.<br />
+        <span class="muted">Your data is stored only on your device.</span>
+      </p>
+    </section>
+
+    <section id="download" class="wrap section">
+      <h2 class="label">Download</h2>
+      <p class="price">₱199</p>
+      <p class="muted">One-time payment. No subscription, no ads, and future updates are included.</p>
+      <div class="platforms">
         <div>
-          <p class="eyebrow">Private by design</p>
-          <h2>Your data never leaves your phone.</h2>
-          <p class="lead">
-            Studex has no servers and no accounts. Everything is saved in a local database on your
-            device, so it opens instantly and works the same with or without a connection.
-          </p>
+          <h3>Android</h3>
+          <a class="btn" href="https://github.com/russalforque/studex/releases/latest">Download APK</a>
+          <details>
+            <summary>How to install</summary>
+            <ol>
+              <li>Download the <code>.apk</code> file on your phone.</li>
+              <li>Open it. If asked, allow your browser to install apps.</li>
+              <li>Tap Install, then open Studex.</li>
+            </ol>
+          </details>
         </div>
-        <ul class="checks">
-          <li><b>No sign-up.</b> Open the app and start, no email or password needed.</li>
-          <li><b>Offline first.</b> Works in class, on the bus, anywhere without data.</li>
-          <li><b>No tracking.</b> No ads, no analytics, nothing sent anywhere.</li>
-          <li><b>Safe changes.</b> Deletes always ask first, and updates never lose your data.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Download -->
-    <section id="download" class="section">
-      <div class="wrap">
-        <div class="download">
-          <h2>Get Studex</h2>
-          <p class="price"><span class="price-amt">₱199</span><span class="price-note">one-time payment</span></p>
-          <p class="lead">No subscription, no ads, no in-app purchases. Every future update is included.</p>
-          <div class="dl-cards">
-            <div class="dl-card">
-              <h3>Android</h3>
-              <p>Download the APK and open it on your phone to install.</p>
-              <a class="btn btn-lg btn-light" href="https://github.com/russalforque/studex/releases/latest">Download APK</a>
-              <details>
-                <summary>How to install an APK</summary>
-                <ol>
-                  <li>Tap <b>Download APK</b> on your Android phone and grab the <code>.apk</code> file.</li>
-                  <li>Open the downloaded file. If asked, allow your browser to install unknown apps.</li>
-                  <li>Tap <b>Install</b>, then open Studex.</li>
-                </ol>
-              </details>
-            </div>
-            <div class="dl-card">
-              <h3>iPhone</h3>
-              <p>The iOS version is on the way. Check back soon.</p>
-              <span class="btn btn-lg btn-light is-disabled" aria-disabled="true">Coming soon</span>
-            </div>
-          </div>
+        <div>
+          <h3>iPhone</h3>
+          <span class="btn btn-off" aria-disabled="true">Coming soon</span>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="wrap faq">
-        <h2 class="center">Questions</h2>
-        <details><summary>How much does Studex cost?</summary><p>₱199, paid once. There's no subscription, no ads and no in-app purchases, and future updates are included.</p></details>
-        <details><summary>Do I need internet or an account?</summary><p>No. Studex runs fully offline and doesn't ask you to sign up.</p></details>
-        <details><summary>Where is my data stored?</summary><p>In a local database on your phone. It isn't uploaded anywhere.</p></details>
-        <details><summary>What happens if I uninstall the app?</summary><p>Uninstalling removes the app's data from your phone. Backup and export are planned for a future update.</p></details>
-        <details><summary>What's coming next?</summary><p>Grades, attendance and notes are next, followed by budget analytics and backup / export.</p></details>
+    <section id="faq" class="wrap section">
+      <h2 class="label">FAQ</h2>
+      <div class="faq">
+        <details><summary>How much does it cost?</summary><p>₱199, paid once. No subscription or in-app purchases.</p></details>
+        <details><summary>Do I need internet or an account?</summary><p>No. Studex works fully offline without signing up.</p></details>
+        <details><summary>Where is my data stored?</summary><p>In a local database on your phone. Nothing is uploaded.</p></details>
+        <details><summary>What if I uninstall the app?</summary><p>Uninstalling removes your data. Backup and export are planned.</p></details>
+        <details><summary>What's next?</summary><p>Grades, attendance and notes, then budget analytics and backup.</p></details>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <a class="brand" href="#top"><img src="favicon.svg" alt="" width="24" height="24" /><span>Studex</span></a>
-      <p>Made for students. © <span id="year">2026</span> Studex.</p>
-    </div>
+  <footer class="wrap footer">
+    <span>Studex</span>
+    <span>© <span id="year">2026</span></span>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
